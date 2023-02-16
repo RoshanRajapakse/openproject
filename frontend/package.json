@@ -116,7 +116,7 @@
     "@uirouter/core": "^6.0.8",
     "@uirouter/rx": "^1.0.0",
     "@w11k/ngx-componentdestroyed": "^5.0.2",
-    "@xeokit/xeokit-bim-viewer": "2.3.10",
+    "@xeokit/xeokit-bim-viewer": "2.4.8",
     "autoprefixer": "^9.6.1",
     "byte-base64": "^1.1.0",
     "cdk-drag-scroll": "^0.0.6",
