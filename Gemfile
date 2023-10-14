@@ -120,7 +120,7 @@ gem 'oj', '~> 3.14.0'
 
 gem 'daemons'
 gem 'delayed_cron_job', '~> 0.9.0'
-gem 'delayed_job_active_record', '~> 4.1.5'
+gem 'delayed_job_active_record', '~> 4.1.8'
 
 gem 'rack-protection', '~> 3.0.0'
 
