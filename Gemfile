@@ -32,8 +32,8 @@ ruby '~> 3.2.0'
 
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
-gem 'activerecord-import', '~> 1.4.0'
-gem 'activerecord-session_store', '~> 2.0.0'
+gem 'activerecord-import', '~> 1.5.0'
+gem 'activerecord-session_store', '~> 2.1.0'
 gem 'rails', '~> 7.0', '>= 7.0.3.1'
 gem 'responders', '~> 3.0'
 
@@ -54,11 +54,11 @@ gem 'warden-basic_auth', '~> 0.2.1'
 
 gem 'will_paginate', '~> 3.3.0'
 
-gem 'friendly_id', '~> 5.5.0'
+gem 'friendly_id', '~> 5.5.1'
 
 gem 'acts_as_list', '~> 1.1.0'
 gem 'acts_as_tree', '~> 2.9.0'
-gem 'awesome_nested_set', '~> 3.5.0'
+gem 'awesome_nested_set', '~> 3.6.0'
 gem 'closure_tree', '~> 7.4.0'
 gem 'rubytree', '~> 2.0.0'
 # Only used in down migrations now.
@@ -120,7 +120,7 @@ gem 'oj', '~> 3.14.0'
 
 gem 'daemons'
 gem 'delayed_cron_job', '~> 0.9.0'
-gem 'delayed_job_active_record', '~> 4.1.5'
+gem 'delayed_job_active_record', '~> 4.1.8'
 
 gem 'rack-protection', '~> 3.0.0'
 
@@ -161,7 +161,7 @@ gem 'cells-rails', '~> 0.1.4'
 
 gem 'meta-tags', '~> 2.18.0'
 
-gem "paper_trail", "~> 12.3"
+gem "paper_trail", "~> 13.0", ">= 13.0.0"
 
 group :production do
   # we use dalli as standard memcache client
@@ -181,15 +181,15 @@ gem 'rack-timeout', '~> 0.6.3', require: "rack/timeout/base"
 
 gem 'nokogiri', '~> 1.14.0'
 
-gem 'carrierwave', '~> 1.3.1'
-gem 'carrierwave_direct', '~> 2.1.0'
+gem 'carrierwave', '~> 1.3.3'
+gem 'carrierwave_direct', '~> 3.0.0'
 gem 'fog-aws'
 
 gem 'aws-sdk-core', '~> 3.107'
 # File upload via fog + screenshots on travis
 gem 'aws-sdk-s3', '~> 1.91'
 
-gem 'openproject-token', '~> 2.2.0'
+gem 'openproject-token', '~> 3.0.0'
 
 gem 'plaintext', '~> 0.3.2'
 
@@ -323,7 +323,7 @@ platforms :mri, :mingw, :x64_mingw do
 
   # Have application level locks on the database to have a mutex shared between workers/hosts.
   # We e.g. employ this to safeguard the creation of journals.
-  gem 'with_advisory_lock', '~> 4.6.0'
+  gem 'with_advisory_lock', '~> 5.0.0'
 end
 
 # Load Gemfile.modules explicitly to allow dependabot to work
