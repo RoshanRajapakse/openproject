@@ -33,9 +33,9 @@ ruby '~> 3.2.0'
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
 gem 'activerecord-import', '~> 1.4.0'
-gem 'activerecord-session_store', '~> 2.0.0'
-gem 'rails', '~> 7.0', '>= 7.0.3.1'
-gem 'responders', '~> 3.0'
+gem 'activerecord-session_store', '~> 2.1.0'
+gem 'rails', '~> 7.0', '>= 7.0.4.3'
+gem 'responders', '~> 3.1', '>= 3.1.0'
 
 gem 'ffi', '~> 1.15'
 
@@ -43,7 +43,7 @@ gem 'mail', '~> 2.8.0'
 
 gem 'rdoc', '>= 2.4.2'
 
-gem 'doorkeeper', '~> 5.5.0'
+gem 'doorkeeper', '~> 5.6.0'
 # Maintain our own omniauth due to relative URL root issues
 # see upstream PR: https://github.com/omniauth/omniauth/pull/903
 gem 'omniauth', git: 'https://github.com/opf/omniauth', ref: 'fe862f986b2e846e291784d2caa3d90a658c67f0'
@@ -84,15 +84,15 @@ gem 'commonmarker', '~> 0.23.7'
 
 # HTML pipeline for transformations on text formatter output
 # such as sanitization or additional features
-gem 'html-pipeline', '~> 2.14.0'
+gem 'html-pipeline', '~> 3.0.0'
 # Tasklist parsing and renderer
-gem 'deckar01-task_list', '~> 2.3.1'
+gem 'deckar01-task_list', '~> 2.3.3'
 # Requires escape-utils for faster escaping
 gem 'escape_utils', '~> 1.3'
 # Syntax highlighting used in html-pipeline with rouge
 gem 'rouge', '~> 4.0.0'
 # HTML sanitization used for html-pipeline
-gem 'sanitize', '~> 6.0.1'
+gem 'sanitize', '~> 6.0.2'
 # HTML autolinking for mails and urls (replaces autolink)
 gem 'rinku', '~> 2.0.4'
 # Version parsing with semver
@@ -142,7 +142,7 @@ gem 'okcomputer', '~> 1.18.1'
 gem 'gon', '~> 6.4.0'
 
 # Lograge to provide sane and non-verbose logging
-gem 'lograge', '~> 0.12.0'
+gem 'lograge', '~> 0.13.0'
 
 # Structured warnings to selectively disable them in production
 gem 'structured_warnings', '~> 0.4.0'
@@ -152,14 +152,14 @@ gem 'structured_warnings', '~> 0.4.0'
 gem 'airbrake', '~> 13.0.0', require: false
 
 gem 'prawn', '~> 2.2'
-gem 'prawn-markup', '~> 0.3.0'
+gem 'prawn-markup', '~> 1.0.0'
 # prawn implicitly depends on matrix gem no longer in ruby core with 3.1
 gem 'matrix', '~> 0.4.2'
 
 gem 'cells-erb', '~> 0.1.0'
 gem 'cells-rails', '~> 0.1.4'
 
-gem 'meta-tags', '~> 2.18.0'
+gem 'meta-tags', '~> 2.19.0'
 
 gem "paper_trail", "~> 12.3"
 
@@ -170,7 +170,7 @@ group :production do
 end
 
 gem 'i18n-js', '~> 3.9.0'
-gem 'rails-i18n', '~> 7.0.0'
+gem 'rails-i18n', '~> 7.0.7'
 
 gem 'sprockets', '~> 3.7.2' # lock sprockets below 4.0
 gem 'sprockets-rails', '~> 3.4.2'
@@ -179,11 +179,11 @@ gem 'puma', '~> 6.0'
 gem 'puma-plugin-statsd', '~> 2.0'
 gem 'rack-timeout', '~> 0.6.3', require: "rack/timeout/base"
 
-gem 'nokogiri', '~> 1.14.0'
+gem 'nokogiri', '~> 1.16.5'
 
 gem 'carrierwave', '~> 1.3.1'
-gem 'carrierwave_direct', '~> 2.1.0'
-gem 'fog-aws'
+gem 'carrierwave_direct', '~> 3.0.0'
+gem 'fog-aws', '>= 3.17.0'
 
 gem 'aws-sdk-core', '~> 3.107'
 # File upload via fog + screenshots on travis
@@ -216,7 +216,7 @@ group :test do
   gem 'rack_session_access'
   gem 'rspec', '~> 3.12.0'
   # also add to development group, so "spec" rake task gets loaded
-  gem 'rspec-rails', '~> 6.0.0', group: :development
+  gem 'rspec-rails', '~> 6.0.2', group: :development
 
   # Retry failures within the same environment
   gem 'retriable', '~> 3.1.1'
@@ -228,10 +228,10 @@ group :test do
   # brings back testing for 'assigns' and 'assert_template' extracted in rails 5
   gem 'rails-controller-testing', '~> 1.0.2'
 
-  gem 'capybara', '~> 3.38.0'
+  gem 'capybara', '~> 3.39.0'
   gem 'capybara-screenshot', '~> 1.0.17'
   gem 'selenium-webdriver', '~> 4.0'
-  gem 'webdrivers', '~> 5.2.0'
+  gem 'webdrivers', '~> 5.3.0'
 
   gem 'fuubar', '~> 2.5.0'
   gem 'timecop', '~> 0.9.0'
@@ -268,11 +268,11 @@ group :development do
 end
 
 group :development, :test do
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '>= 3.0.0'
   # Require factory_bot for usage with openproject plugins testing
   gem 'factory_bot', '~> 6.2.0'
   # require factory_bot_rails for convenience in core development
-  gem 'factory_bot_rails', '~> 6.2.0'
+  gem 'factory_bot_rails', '~> 6.3.0'
 
   # Tracing and profiling gems
   gem 'flamegraph', require: false
