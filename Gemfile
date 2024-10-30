@@ -288,9 +288,9 @@ group :development, :test do
   gem 'pry-rescue', '~> 1.5.2'
 
   # ruby linting
-  gem 'rubocop', require: false
+  gem 'rubocop', '>= 1.66.0', require: false
   gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
+  gem 'rubocop-rspec', '>= 3.0.0', require: false
 
   # git hooks manager
   gem 'lefthook', require: false
