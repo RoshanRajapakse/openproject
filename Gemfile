@@ -34,7 +34,7 @@ gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
 gem 'activerecord-import', '~> 1.4.0'
 gem 'activerecord-session_store', '~> 2.0.0'
-gem 'rails', '~> 7.0', '>= 7.0.3.1'
+gem 'rails', '~> 7.2', '>= 7.2.0'
 gem 'responders', '~> 3.0'
 
 gem 'ffi', '~> 1.15'
@@ -289,7 +289,7 @@ group :development, :test do
 
   # ruby linting
   gem 'rubocop', require: false
-  gem 'rubocop-rails', require: false
+  gem 'rubocop-rails', '>= 2.30.0', require: false
   gem 'rubocop-rspec', require: false
 
   # git hooks manager
@@ -303,7 +303,7 @@ end
 gem 'bootsnap', '~> 1.16.0', require: false
 
 # API gems
-gem 'grape', '~> 1.7.0'
+gem 'grape', '~> 2.1.0'
 gem 'grape_logging', '~> 1.8.4'
 gem 'roar', '~> 1.2.0'
 
