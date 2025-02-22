@@ -84,7 +84,7 @@ gem 'commonmarker', '~> 0.23.7'
 
 # HTML pipeline for transformations on text formatter output
 # such as sanitization or additional features
-gem 'html-pipeline', '~> 2.14.0'
+gem 'html-pipeline', '~> 3.0.0'
 # Tasklist parsing and renderer
 gem 'deckar01-task_list', '~> 2.3.1'
 # Requires escape-utils for faster escaping
@@ -179,7 +179,7 @@ gem 'puma', '~> 6.0'
 gem 'puma-plugin-statsd', '~> 2.0'
 gem 'rack-timeout', '~> 0.6.3', require: "rack/timeout/base"
 
-gem 'nokogiri', '~> 1.14.0'
+gem 'nokogiri', '~> 1.18.3'
 
 gem 'carrierwave', '~> 1.3.1'
 gem 'carrierwave_direct', '~> 2.1.0'
@@ -290,7 +290,7 @@ group :development, :test do
   # ruby linting
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
+  gem 'rubocop-rspec', '>= 3.5.0', require: false
 
   # git hooks manager
   gem 'lefthook', require: false
