@@ -7,7 +7,7 @@ RUN touch ./src/app/features/plugins/linked-plugins.styles.sass
 RUN cp ./src/app/features/plugins/linked-plugins.module.ts.example ./src/app/features/plugins/linked-plugins.module.ts
 RUN npm run storybook:build
 
-FROM caddy:2-alpine as prod
+FROM caddy:2.11-alpine as prod
 
 ARG DOMAIN=my.pullpreview.com
 ENV DOMAIN=$DOMAIN
